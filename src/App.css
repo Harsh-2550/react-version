@@ -1,0 +1,87 @@
+button {
+    cursor: pointer;
+}
+.todo-list-wrapper {
+    width: 350px;
+    padding: 20px;
+    background-color: blueviolet;
+    border-radius: 8px;
+}
+.todo-list-wrapper h2 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+.todo-form {
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 10px 0px;
+}
+.todo-form input {
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0px 0px 0px 15px;
+    border: none;
+    outline: none;
+    color: #3f3f3f;
+    flex-grow: 1;
+}
+.todo-form button {
+    padding: 0px 30px;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: inherit;
+    outline: none;
+    border: none;
+    background-color: tomato;
+    color: #fff;
+}
+
+.tododata-list {
+    margin-top: 2rem;
+}
+
+.todo-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.todo-card p {
+    font-size: 0.95rem; 
+    font-weight: 800;
+    padding: 0px 0px 0px 15px;
+    cursor: pointer;
+}
+.todo-card p.complete {
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+
+.todo-card .todo-icons {
+    display: flex;
+    gap: 3px;
+}
+.todo-card button {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    font-weight: 600;
+}
+
+button:active {
+    opacity: 0.8;
+}
