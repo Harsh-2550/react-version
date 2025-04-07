@@ -1,11 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Todolist from './components/Todolist'
 import { v4 as uuidv4 } from 'uuid';
 
+const localupdate = () => {
+  const islist =  localStorage.getItem("list");
+  if(islist) {
+    return JSON.parse(islist);
+  } else {
+    return [];
+  }
+}
+
+
 function App() {
 
-  const [todos, settodos] = useState([]);
+  const [todos, settodos] = useState(localupdate());
   const [data ,setdata] = useState("");
   const [id, setid] = useState("");
 
@@ -58,6 +68,11 @@ function App() {
     setdata(edit.task);
     setid(id);
   }
+
+  // add local storage 
+  useEffect(() => {
+    localStorage.getItem("list" , JSON.stringify(todos))
+  }, [todos]);
 
   
   return (
